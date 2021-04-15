@@ -1,11 +1,18 @@
 from setuptools import setup
+import subprocess
+
+remote_version = (
+    subprocess.run(["git", "describe", "--tags"], stdout=subprocess.PIPE)
+    .stdout.decode("utf-8")
+    .strip()
+)
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="mohit96-helloworld",
-    version="0.0.1",  ## 0.0.X is unstable package number
+    version=remote_version,  ## 0.0.X is unstable package number
     description="Say Hello!",
     py_modules=["helloworld"],
     package_dir={"": "src"},
