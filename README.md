@@ -2,12 +2,15 @@
 
 This is an example project demonstrating how to publish a python module to PyPI. 
 
+Package link: https://pypi.org/project/mohit96-helloworld/
+
+
 ## Installation
 
 Run the following to install:
 
 ```python
-pip install helloworld
+pip install mohit96-helloworld
 ```
 
 ## Usage
